@@ -155,17 +155,17 @@
 
 (function(){
 	function iealert(){
-		var title = "\u4f60\u77e5\u9053\u4f60\u7684\u6d4f\u89c8\u5668\u5185\u6838\u662f\u8fc7\u65f6\u7684\u5417?",
-			text = "\u4E3A\u4E86\u5F97\u5230\u6211\u4EEC\u7F51\u7AD9\u6700\u597D\u7684\u4F53\u9A8C\u6548\u679C,\u6211\u4EEC\u5EFA\u8BAE\u60A8\u5347\u7EA7\u5230\u6700\u65B0\u7248\u672C\u7684Internet Explorer\u6216\u9009\u62E9\u53E6\u4E00\u4E2Aweb\u6D4F\u89C8\u5668.\u4E00\u4E2A\u5217\u8868\u6700\u6D41\u884C\u7684web\u6D4F\u89C8\u5668\u5728\u4E0B\u9762\u53EF\u4EE5\u627E\u5230.<br /><br /><h1 id='goon' style='font-size:20px;cursor:pointer; vertical-align:middle;'>>>>\u7EE7\u7EED\u8BBF\u95EE<span style=\"font-size:12px;font-weight:normal;color:red; vertical-align:middle;\">(\u67d0\u4e9b\u529f\u80fd\u53ef\u80fd\u4e0d\u80fd\u6b63\u5e38\u4f7f\u7528)</span></h1>",
+		//var title = "\u4f60\u77e5\u9053\u4f60\u7684\u6d4f\u89c8\u5668\u5185\u6838\u662f\u8fc7\u65f6\u7684\u5417?",
+        var title = "您的浏览器版本过低",
+			text = "为了得到更好的访问体验，建议您更换或升级浏览器" + "<br /><br /><h1 id='goon' style='font-size:20px;cursor:pointer; vertical-align:middle;'> >>>\u7EE7\u7EED\u8BBF\u95EE<span style=\"font-size:12px;font-weight:normal;color:red; vertical-align:middle;\">(\u67d0\u4e9b\u529f\u80fd\u53ef\u80fd\u4e0d\u80fd\u6b63\u5e38\u4f7f\u7528)</span></h1>",
 			panel = "<span style=\"font-size:18px;margin: 0 0 20px 0;display:block;padding:0;\">"+ title +"</span>"
 				  + "<p style='font-size:14px;width:486px;text-align:justify;'> "+ text +"</p>"
-			      + "<div style='position: absolute;bottom:35px;'>"
+			      + "<div style='position: absolute;bottom:55px;'>"
 			      + "<ul style='list-style: none;margin:0;padding:0;'>"
-			      + "<li style='float:left;margin:0 22px 0 0;'><a href='https://www.google.com/chrome/' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: 0 0;width: 73px;height: 96px;margin:0 4px 0 0;'></a></li>"
+			      + "<li style='float:left;margin:0 22px 0 0;'><a href='http://www.google.cn/chrome/browser/desktop/index.html' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: 0 0;width: 73px;height: 96px;margin:0 4px 0 0;'></a></li>"
 			      + "<li style='float:left;margin:0 22px 0 0;'><a href='http://www.mozilla.org/en-US/firefox/new/' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: -292px 0;width: 73px;height: 98px;'></a></li>"
-			      + "<li style='float:left;margin:0 22px 0 0;'><a href='http://windows.microsoft.com/en-US/internet-explorer/downloads/ie/' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: -179px 0;width: 95px;height: 98px;'></a></li>"
-			      + "<li style='float:left;margin:0 22px 0 0;'><a href='http://www.apple.com/safari/download/' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: -387px 0;width: 73px;height: 98px;margin:0 4px 0 0;'></a></li>"
-			      + "<li style='float:left;'><a href='http://www.opera.com/download/' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: -90px 0;width: 73px;height: 98px;'></a></li>"
+			      + "<li style='float:left;margin:0 22px 0 0;'><a href='http://www.microsoft.com/zh-cn/download/internet-explorer-11-for-windows-7-details.aspx' target='_blank' style='display:inline-block;background: url(iealert/iealertsprite.png) no-repeat;background-position: -179px 0;width: 98px;height: 98px;'></a></li>"
+			      + "<li style='float:left;'><a href='http://browser.qq.com/' target='_blank' style='display:inline-block;background: url(iealert/qqbrowser.png) no-repeat;background-position: 0 0;width: 79px;height: 98px;'></a></li>"
 			      + "<ul>"
 			      + "</div>";
 
@@ -180,7 +180,7 @@
 		dom1.style.cssText = "width:100%;height:" + bHeight + "px;background-image:url(iealert/bg.png);position: fixed; top: 0; left: 0;z-index:9999;_position: absolute;";
 
 		dom2.id = 'ie-alert-panel';
-		dom2.style.cssText = "width:520px;height:331px;position:fixed;background: url(iealert/iealertsprite.png) no-repeat;background-position: -1px -109px ;_background-position: -627px -116px ;top:" + ( ( wHeight - 403 ) / 2 ) + "px;left:" + ( ( wWidth - 520 ) / 2 ) + "px;padding:72px 0 0 72px;*position:fixed;_position:absolute;font-weight:bold;color:#333;line-height:1.5em;z-index:10000;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;";
+		dom2.style.cssText = "width:520px;height:331px;position:fixed;background: url(iealert/iealertsprite.png) no-repeat;background-position: -1px -109px;_background-position: -627px -116px ;top:" + ( ( wHeight - 403 ) / 2 ) + "px;left:" + ( ( wWidth - 520 ) / 2 ) + "px;padding:72px 0 0 72px;*position:fixed;_position:absolute;font-weight:bold;color:#333;line-height:1.5em;z-index:10000;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;";
 
 		dom2.innerHTML = panel;
 
